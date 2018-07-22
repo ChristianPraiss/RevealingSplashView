@@ -102,12 +102,13 @@ open class RevealingSplashView: UIView, SplashAnimatable{
      
      - returns: The created RevealingSplashViewObject
      */
-    public init(iconImage: UIImage, iconInitialSize:CGSize, backgroundColor: UIColor)
+    public init(iconImage: UIImage, iconInitialSize:CGSize, backgroundColor: UIColor, iconInitialOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
         //Sets the initial values of the image view and icon view
         self.imageView = UIImageView()
         self.iconImage = iconImage
         self.iconInitialSize = iconInitialSize
+        self.iconInitialOffset = iconInitialOffset
         //Inits the view to the size of the screen
         super.init(frame: (UIScreen.main.bounds))
         
@@ -127,12 +128,13 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         
     }
     
-    public init(iconImage: UIImage, iconInitialSize:CGSize, backgroundImage: UIImage)
+    public init(iconImage: UIImage, iconInitialSize:CGSize, backgroundImage: UIImage, iconInitialOffset: CGPoint = CGPoint(x: 0, y: 0))
     {
         //Sets the initial values of the image view and icon view
         self.imageView = UIImageView()
         self.iconImage = iconImage
         self.iconInitialSize = iconInitialSize
+        self.iconInitialOffset = iconInitialOffset
         //Inits the view to the size of the screen
         super.init(frame: (UIScreen.main.bounds))
         
