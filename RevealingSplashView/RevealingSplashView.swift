@@ -63,6 +63,15 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         }
     }
     
+    ///The initial offset of the icon. It can be used to adjust the position of the icon to match the position of the icon in your LaunchScreen Splash view
+    open var iconInitialOffset: CGPoint = CGPoint(x: 0, y: 0) {
+        
+        didSet{
+            
+            imageView?.frame = CGRect(x: iconInitialOffset.x, y: iconInitialOffset.y, width: iconInitialSize.width, height: iconInitialSize.height)
+        }
+    }
+    
     /// The image view containing the background Image
     open var backgroundImageView: UIImageView?
     
@@ -105,7 +114,7 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         imageView?.image = iconImage
         imageView?.tintColor = iconColor
         //Set the initial size and position
-        imageView?.frame = CGRect(x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
+        imageView?.frame = CGRect(x: iconInitialOffset.x, y: iconInitialOffset.y, width: iconInitialSize.width, height: iconInitialSize.height)
         //Sets the content mode and set it to be centered
         imageView?.contentMode = UIViewContentMode.scaleAspectFit
         imageView?.center = self.center
@@ -130,7 +139,7 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         imageView?.image = iconImage
         imageView?.tintColor = iconColor
         //Set the initial size and position
-        imageView?.frame = CGRect(x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
+        imageView?.frame = CGRect(x: iconInitialOffset.x, y: iconInitialOffset.y, width: iconInitialSize.width, height: iconInitialSize.height)
         //Sets the content mode and set it to be centered
         imageView?.contentMode = UIViewContentMode.scaleAspectFit
         imageView?.center = self.center
