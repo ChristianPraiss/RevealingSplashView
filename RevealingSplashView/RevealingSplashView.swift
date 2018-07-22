@@ -114,7 +114,7 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         imageView?.image = iconImage
         imageView?.tintColor = iconColor
         //Set the initial size and position
-        imageView?.frame = CGRect(x: x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
+        imageView?.frame = CGRect(x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
         //Sets the content mode and set it to be centered
         imageView?.contentMode = UIViewContentMode.scaleAspectFit
         imageView?.center = CGPoint(x: self.center.x - iconInitialOffset.x, y: self.center.y - iconInitialOffset.y)
