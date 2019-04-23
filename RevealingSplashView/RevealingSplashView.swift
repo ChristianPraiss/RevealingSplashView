@@ -42,13 +42,13 @@ open class RevealingSplashView: UIView, SplashAnimatable{
             if(useCustomIconColor == true){
 
                 if let iconImage = self.iconImage {
-                    imageView?.image = iconImage.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                    imageView?.image = iconImage.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 }
             }
             else{
                 
                 if let iconImage = self.iconImage {
-                    imageView?.image = iconImage.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                    imageView?.image = iconImage.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
                 }
             }
         }
@@ -117,7 +117,7 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         //Set the initial size and position
         imageView?.frame = CGRect(x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
         //Sets the content mode and set it to be centered
-        imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         imageView?.center = CGPoint(x: self.center.x - iconInitialOffset.x, y: self.center.y - iconInitialOffset.y)
 
         //Adds the icon to the view
@@ -143,14 +143,14 @@ open class RevealingSplashView: UIView, SplashAnimatable{
         //Set the initial size and position
         imageView?.frame = CGRect(x: 0, y: 0, width: iconInitialSize.width, height: iconInitialSize.height)
         //Sets the content mode and set it to be centered
-        imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         imageView?.center = CGPoint(x: self.center.x - iconInitialOffset.x, y: self.center.y - iconInitialOffset.y)
 
         //Sets the background image
         self.backgroundImageView = UIImageView()
         backgroundImageView?.image = backgroundImage
         backgroundImageView?.frame = UIScreen.main.bounds
-        backgroundImageView?.contentMode = UIViewContentMode.scaleAspectFill
+        backgroundImageView?.contentMode = UIView.ContentMode.scaleAspectFill
         
         self.addSubview(backgroundImageView!)
         
